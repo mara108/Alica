@@ -1,3 +1,5 @@
+import os
+
 # импортируем библиотеки
 from flask import Flask, request
 import logging
