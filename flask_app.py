@@ -1,5 +1,5 @@
 # импортируем библиотеки
-from flask import Flask, request
+from flask import Flask, request, Response
 import logging
 
 # библиотека, которая нам понадобится для работы с JSON
@@ -46,7 +46,7 @@ def main():
     logging.info('Response: %r', response)
 
     # Преобразовываем в JSON и возвращаем
-    return json.dumps(response)
+    return Response(json.dumps(response), mimetype='application/json')
 
 
 def handle_dialog(req, res):
